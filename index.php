@@ -1,291 +1,233 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio</title>
-    <meta name="description" content="Portfolio personnel moderne et esthétique.">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg-color: #0f172a;
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-            --accent-primary: #8b5cf6;
-            --accent-secondary: #3b82f6;
-            --glass-bg: rgba(255, 255, 255, 0.03);
-            --glass-border: rgba(255, 255, 255, 0.08);
-        }
+    <title>Portfolio Développeur - Emma Ducos Martin</title>
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Outfit', sans-serif;
-        }
+    <!-- Polices Google : DM Serif Display pour l'élégance (titres), Inter pour la lisibilité (corps) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.6;
-            overflow-x: hidden;
-            background-image: 
-                radial-gradient(circle at 15% 50%, rgba(139, 92, 246, 0.12), transparent 25%),
-                radial-gradient(circle at 85% 30%, rgba(59, 130, 246, 0.12), transparent 25%);
-            background-attachment: fixed;
-        }
-
-        /* Navigation */
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.5rem 5%;
-            background: rgba(15, 23, 42, 0.7);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid var(--glass-border);
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            letter-spacing: -0.5px;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--text-main);
-            text-decoration: none;
-            font-weight: 400;
-            transition: color 0.3s ease;
-            font-size: 0.95rem;
-        }
-
-        .nav-links a:hover {
-            color: var(--accent-primary);
-        }
-
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 0 1rem;
-            margin-top: 60px;
-        }
-
-        .hero h1 {
-            font-size: clamp(2.5rem, 5vw, 4.5rem);
-            margin-bottom: 1.5rem;
-            line-height: 1.1;
-            font-weight: 800;
-            letter-spacing: -1px;
-        }
-
-        .highlight {
-            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .hero p {
-            font-size: clamp(1rem, 2vw, 1.2rem);
-            color: var(--text-muted);
-            max-width: 600px;
-            margin-bottom: 2.5rem;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 0.8rem 2.5rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            cursor: pointer;
-            border: none;
-            font-size: 1rem;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-            color: white;
-            box-shadow: 0 4px 20px rgba(139, 92, 246, 0.3);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 30px rgba(139, 92, 246, 0.5);
-        }
-
-        /* Generic Section Section */
-        section {
-            padding: 6rem 5%;
-        }
-
-        .section-title {
-            font-size: clamp(2rem, 4vw, 2.5rem);
-            margin-bottom: 4rem;
-            text-align: center;
-            font-weight: 800;
-        }
-
-        /* Cards Layout */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .card {
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: 24px;
-            padding: 2.5rem;
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
-            opacity: 0;
-            transition: opacity 0.4s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-            border-color: rgba(255, 255, 255, 0.15);
-            background: rgba(255, 255, 255, 0.05);
-        }
-
-        .card:hover::before {
-            opacity: 1;
-        }
-
-        .card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--text-main);
-        }
-
-        .card p {
-            color: var(--text-muted);
-            font-size: 1rem;
-            line-height: 1.7;
-        }
-
-        /* Contact Section */
-        .contact-box {
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: 24px;
-            padding: 4rem 2rem;
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .contact-box p {
-            color: var(--text-muted);
-            margin-bottom: 2rem;
-            font-size: 1.1rem;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 2rem;
-            border-top: 1px solid var(--glass-border);
-            color: var(--text-muted);
-            font-size: 0.9rem;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none; /* Hide for simplicity on mobile in a template */
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <nav>
-        <div class="logo">Portfolio.</div>
-        <ul class="nav-links">
-            <li><a href="#accueil">Accueil</a></li>
-            <li><a href="#projets">Projets</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+        <a href="#" class="logo"><span class="star-light">✦</span> Emma D.M</a>
+        <div class="nav-links">
+            <a href="#about">À propos</a>
+            <a href="#resume">CV</a>
+            <a href="#work">Projets</a>
+            <a href="veille.php">Veille</a>
+            <a href="mailto:ducosmartinemma@gmail.com" class="btn-contact">Me contacter</a>
+        </div>
     </nav>
 
-    <main class="hero" id="accueil">
-        <h1>Créons des expériences <br><span class="highlight">inoubliables.</span></h1>
-        <p>Je suis un développeur passionné par le web design, l'innovation et la création d'interfaces modernes, fluides et élégantes.</p>
-        <a href="#projets" class="btn btn-primary">Découvrir mon travail</a>
+    <header class="hero">
+        <div class="hero-text-bg">
+            PORTFOLIO<br>
+            PORTFOLIO<br>
+            PORTFOLIO
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-left">
+                <p>Développeuse d'applications en formation. Passionnée par la technologie autant que par la créativité,
+                    j'allie rigueur, technique et sens artistique dans mes projets.</p>
+            </div>
+
+        </div>
+
+        <div class="scroll-down">
+            Scroll<br>down
+        </div>
+    </header>
+
+    <main class="index-container">
+        <!-- COLONNE GAUCHE -->
+        <div class="left-column" id="about">
+
+            <div class="intro-text">
+                <h1 style="font-size: 4.5rem;">Hello,<br>je suis Emma !</h1>
+                <p>Actuellement en deuxième année de <strong>BTS SIO option SLAM</strong> au Lycée Benjamin Franklin
+                    d'Orléans, j'ai d'abord exploré les Humanités, la Littérature et les Arts Plastiques, ce qui me
+                    donne une approche créative de la technique.</p>
+            </div>
+
+            <section class="education-section" style="margin-top: 4rem;">
+                <h2 class="section-title">Éducation</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2023 2025</div>
+                        <div class="timeline-title">BTS SIO (option SLAM)</div>
+                        <div class="timeline-subtitle">Lycée Benjamin Franklin, Orléans</div>
+                        <div class="timeline-desc">Développement d'applications, bases de données, gestion de projet et
+                            cybersécurité.</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-title">Lycée Jean Moulin, Langon</div>
+                        <div class="timeline-subtitle">Humanités, Littérature, Philosophie & Arts Plastiques</div>
+                        <div class="timeline-desc">Développement d'un sens artistique et d'une rigueur d'analyse.</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="accent-box" id="resume">
+                <h2 class="section-title">Expérience</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2026 - En cours</div>
+                        <div class="timeline-title">Stagiaire Développement d'Applications</div>
+                        <div class="timeline-subtitle">Labomedia</div>
+                        <div class="timeline-desc">Développement d'une application multiplateforme de suivi de temps et
+                            d'activités pour l'équipe interne de l'entreprise.</div>
+                        <div class="tag-container">
+                            <span class="tag">#Python</span>
+                            <span class="tag">#Qt</span>
+                        </div>
+                        <a href="stage-labomedia.php"
+                            style="display:inline-block; margin-top:1rem; font-weight:600; font-size:0.9rem; text-decoration:underline;">Voir
+                            le détail du projet &rarr;</a>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Mai - Juin 2025</div>
+                        <div class="timeline-title">Stagiaire Développement d'Applications</div>
+                        <div class="timeline-subtitle">Everlite Concept, Grigny</div>
+                        <div class="timeline-desc">Conception d'e-mails HTML/CSS, mise à jour du site Joomla,
+                            configuration de workflows Salesforce, et migration de logiciels (CutPro).</div>
+                        <div class="tag-container">
+                            <span class="tag">#Salesforce</span>
+                            <span class="tag">#HTML/CSS</span>
+                            <span class="tag">#Joomla</span>
+                        </div>
+                        <a href="stage-everlite.php"
+                            style="display:inline-block; margin-top:1rem; font-weight:600; font-size:0.9rem; text-decoration:underline;">Voir
+                            le détail des missions &rarr;</a>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Juillet 2025</div>
+                        <div class="timeline-title">Assistante Comm. & Support Commercial</div>
+                        <div class="timeline-subtitle">Everlite Concept, Grigny</div>
+                        <div class="timeline-desc">Organisation de la médiathèque, mise à jour des dossiers et support
+                            aux équipes.</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-title">Création de site internet</div>
+                        <div class="timeline-subtitle">mariepierre-legrand.com</div>
+                        <div class="timeline-desc">Conception d'un site vitrine WordPress : personnalisation du design,
+                            intégration SEO et configuration technique.</div>
+                        <div class="tag-container">
+                            <span class="tag">#WordPress</span>
+                            <span class="tag">#SEO</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="education-section" style="margin-top: 4rem;" id="work">
+                <h2 class="section-title">Expérimentations</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-title">Projets Personnels Javascript</div>
+                        <div class="timeline-desc">Réalisation de petits projets interactifs, de jeux et de scripts pour
+                            tester différentes technologies.</div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- COLONNE DROITE -->
+        <div class="right-column">
+
+            <section class="profile-card">
+                <h3>Contact</h3>
+                <div class="profile-info">
+                    <p><i class="fas fa-map-marker-alt"></i> Orléans, France</p>
+                    <p><i class="fas fa-envelope"></i> ducosmartinemma@gmail.com</p>
+                </div>
+            </section>
+
+            <div class="bg-text-skills">
+                RESUME<br>RESUME
+            </div>
+
+            <section class="skills-section">
+                <h2 class="section-title"><span class="black-text">Compétences Techniques</span></h2>
+
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Développement</h4>
+                        <ul class="skill-list">
+                            <li><span>Langage</span> <span>PHP, Javascript, HTML, CSS, MVC, Sublime Text, JQuery,
+                                    Ajax</span></li>
+                            <li><span>POO</span> <span>PHP, Java, JUnit, SonarQube, Eclipse</span></li>
+                            <li><span>Frameworks</span> <span>Bootstrap, CodeIgniter</span></li>
+                            <li><span>SGBDR</span> <span>MySQL, MariaDB, SQL Server</span></li>
+                            <li><span>Dev. Mobile</span> <span>Android Studio, SQLite, XML</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4>Outils et Méthodes</h4>
+                        <ul class="skill-list">
+                            <li><span>Cybersécurité</span> <span>Requêtes préparées, Hashage, JWT, CSRF</span></li>
+                            <li><span>Tests fonction.</span> <span>Selenium IDE</span></li>
+                            <li><span>CMS</span> <span>WordPress, WooCommerce</span></li>
+                            <li><span>Versionnement</span> <span>Git</span></li>
+                            <li><span>Gestion projet</span> <span>SCRUM, Trello</span></li>
+                            <li><span>Modélisation</span> <span>Merise, UML</span></li>
+                            <li><span>Documentation</span> <span>Doxygen</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <div class="bottom-section">
+                <div class="bottom-block">
+                    <h4>Missions Salesforce</h4>
+                    <ul>
+                        <li>
+                            <strong>Gestion & Config</strong>
+                            <span>Création de tableaux de bord, formules et règles.</span>
+                        </li>
+                        <li>
+                            <strong>Workflows</strong>
+                            <span>Automatisation des devis et tests en environnement.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bottom-block">
+                    <h4>Centres d'intérêt</h4>
+                    <div class="hobbies-icons" style="margin-top: 1.5rem;">
+                        <div class="hobby-item">
+                            <i class="fas fa-code"></i>
+                            <span>Code interactif</span>
+                        </div>
+                        <div class="hobby-item">
+                            <i class="fas fa-paint-brush"></i>
+                            <span>Arts Plastiques</span>
+                        </div>
+                        <div class="hobby-item">
+                            <i class="fas fa-book-open"></i>
+                            <span>Littérature</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        </div>
     </main>
 
-    <section id="projets">
-        <h2 class="section-title">Mes Projets Récents</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Application E-commerce</h3>
-                <p>Une plateforme de vente en ligne complète, développée avec des technologies modernes. Interface utilisateur en glassmorphism, panier dynamique et paiement sécurisé.</p>
-            </div>
-            <div class="card">
-                <h3>Dashboard Analytique</h3>
-                <p>Tableau de bord interactif permettant de visualiser des données complexes en temps réel. Graphiques fluides, design sombre et minimaliste pour une lisibilité optimale.</p>
-            </div>
-            <div class="card">
-                <h3>Réseau Social d'Entreprise</h3>
-                <p>Espace d'échange interne conçu pour favoriser la collaboration. Messagerie instantanée, partage de fichiers et profils utilisateurs personnalisables.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact">
-        <div class="contact-box">
-            <h2 class="section-title" style="margin-bottom: 1.5rem;">Travaillons ensemble</h2>
-            <p>Vous avez un projet en tête ou vous souhaitez simplement échanger ? Je suis actuellement ouvert aux nouvelles opportunités.</p>
-            <a href="mailto:contact@exemple.com" class="btn btn-primary">Me contacter</a>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; <?php echo date("Y"); ?> Mon Portfolio. Conçu avec passion.</p>
-    </footer>
-
 </body>
+
 </html>
