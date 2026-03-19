@@ -9,7 +9,9 @@
     <!-- Polices Google : DM Serif Display pour l'élégance (titres), Inter pour la lisibilité (corps) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <link rel="stylesheet" href="style.css">
@@ -39,38 +41,112 @@
 
         <div class="hero-content hero-content-subpage">
             <h1 class="hero-title">Mon stage à Labomedia</h1>
-            <p class="hero-subtitle">Développement d'une application multiplateforme de suivi de temps et d'activités pour l'équipe interne.</p>
+            <p class="hero-subtitle">Développement d'une application multiplateforme de suivi de temps et d'activités
+                pour l'équipe interne.</p>
         </div>
     </header>
 
     <main>
         <div class="container">
+            <div class="intro-text stage-intro">
+                <p>
+                    Lors de mon stage chez <strong>Labomedia</strong>, une association et pôle ressource axé sur la
+                    culture numérique, j'ai eu l'opportunité de concevoir et développer de A à Z
+                    <strong>TaskTime</strong>, une application autonome
+                    de gestion de temps et de productivité pour l'équipe interne.
+                </p>
+                <p>
+                    Ce projet m'a permis de mettre en pratique mes compétences en algorithmique et en conception
+                    d'interface utilisateur pour répondre à un besoin concret d'optimisation de projet. Le challenge
+                    majeur était d'assurer la compatibilité
+                    multiplateforme (Windows, macOS, Linux). Pour cela, j'ai sélectionné une stack technologique robuste
+                    : Python accompagné du framework <strong>PySide6</strong> (Qt) pour l'interface,
+                    <strong>SQLite3</strong> pour la base de données locale, et <strong>Matplotlib</strong> pour la
+                    génération des graphiques.
+                </p>
+                <p>
+                    Je vous invite à découvrir plus en détail les fonctionnalités natives de TaskTime (chronomètre
+                    interactif par bulles, analyses temporelles multi-échelles, gestion hiérarchique...) à travers la
+                    release.
+                </p>
+
+                <div style="margin-top: 2rem; margin-bottom: 3.5rem; display: flex; gap: 2rem; flex-wrap: wrap;">
+                    <a href="https://github.com/Emmacarenaaaa/TaskTime/releases/tag/v1.0.0-final" target="_blank"
+                        class="article-link" style="font-size: 1.1rem;">
+                        <i class="fab fa-github" style="color: var(--primary-dark);"></i> Télécharger la release
+                        (GitHub)
+                    </a>
+                </div>
+
+                <div class="project-gallery">
+                    <div class="gallery-item">
+                        <img src="assets/chrono_view.png" alt="Aperçu principal du chrono Labomedia">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/chrono2_view.png" alt="Vue analyse de l'application Labomedia">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/analyse_view.png" alt="Interface du tracker de temps Labomedia">
+                    </div>
+                </div>
+            </div>
+
             <h2 class="section-title">Mes Missions</h2>
 
             <div class="mission-grid">
 
                 <div class="mission-card">
                     <i class="fas fa-stopwatch mission-icon"></i>
-                    <h3>Application de suivi de temps</h3>
-                    <p>Je développe actuellement une application de suivi de temps pour l'équipe interne de Labomedia. Le principe est simple et efficace : l'utilisateur choisit son activité (par exemple "code", "réunion", "recherche") et lance un chronomètre pour mesurer avec précision le temps qu'il y consacre au cours de la journée.</p>
+                    <h3>Création de TaskTime</h3>
+                    <p>J'ai développé <strong>TaskTime</strong>, un gestionnaire interactif avec suivi en temps réel. Le
+                        principe est particulièrement ergonomique : l'utilisateur structure ses projets et activités,
+                        puis interagit avec des "bulles" visuelles pour lancer et arrêter son chronomètre avec précision
+                        tout au long de la journée.</p>
                 </div>
 
                 <div class="mission-card">
                     <i class="fas fa-chart-pie mission-icon"></i>
-                    <h3>Analyse des données et de l'activité</h3>
-                    <p>L'idée principale derrière ce tracker de temps est de pouvoir analyser par la suite comment les journées de l'équipe sont réparties. Les données récoltées permettent d'avoir une vision claire et d'optimiser la gestion de projet et l'allocation du temps en fonction des missions.</p>
+                    <h3>Visualisation et analyses dynamiques</h3>
+                    <p>Afin de restituer les données récoltées (sauvegardées via SQLite3), j'ai intégré la bibliothèque
+                        Matplotlib pour générer des tableaux de bord dynamiques. Grâce à des filtres temporels
+                        (Aujourd'hui, semaine, mois, année), l'équipe peut observer l'évolution et optimiser facilement
+                        l'allocation de son temps.</p>
                 </div>
 
                 <div class="mission-card">
                     <i class="fab fa-python mission-icon"></i>
-                    <h3>Développement multiplateforme avec Python et Qt</h3>
-                    <p>Le vrai challenge fonctionnel et technique de cette mission était de rendre l'outil compatible avec tous les systèmes d'exploitation utilisés par les membres de l'équipe (Windows, Mac et Linux). C'est pour cette raison que j'ai choisi de travailler et de concevoir cette interface avec le framework Qt et le langage Python.</p>
+                    <h3>Développement multiplateforme via PySide6</h3>
+                    <p>Le vrai challenge fonctionnel et technique de cette mission était de rendre l'outil compatible
+                        avec le parc informatique hétérogène de l'équipe (Windows, macOS et Linux). C'est pourquoi j'ai
+                        opté pour Python couplé à <strong>PySide6</strong> (Qt for Python), compilé en exécutables
+                        natifs prêts à l'emploi grâce à PyInstaller.</p>
                 </div>
 
                 <div class="mission-card">
                     <i class="fas fa-server mission-icon"></i>
                     <h3>Environnement local et autonomie</h3>
-                    <p>Pour assurer une parfaite réactivité et une intégration simple, l'application fonctionne en version locale. L'utilisateur est donc totalement autonome avec son propre logiciel pour créer, paramétrer et gérer lui-même ses propres projets ainsi que ses activités sans devoir dépendre d'un serveur tiers complexe.</p>
+                    <p>Pour assurer une parfaite réactivité et une intégration simple, l'application fonctionne en
+                        version locale. L'utilisateur est donc totalement autonome avec son propre logiciel pour créer,
+                        paramétrer et gérer lui-même ses propres projets ainsi que ses activités sans devoir dépendre
+                        d'un serveur tiers complexe.</p>
+                </div>
+
+                <div class="mission-card">
+                    <i class="fas fa-file-csv mission-icon"></i>
+                    <h3>Exportation de données & Analyse</h3>
+                    <p>Pour exploiter pleinement les temps enregistrés, j'ai mis en place une fonctionnalité
+                        d'exportation. En un clic, l'équipe peut générer un fichier d'export contenant l'historique
+                        complet, ce qui facilite considérablement l'intégration des données dans des outils de tableur
+                        externes ou pour l'administration.</p>
+                </div>
+
+                <div class="mission-card">
+                    <i class="fas fa-sliders-h mission-icon"></i>
+                    <h3>Interface hautement personnalisable</h3>
+                    <p>L'application est conçue pour être très ergonomique. L'utilisateur peut personnaliser entièrement
+                        son interface : des couleurs distinctes pour chaque "bulle" de projet pour s'y retrouver
+                        visuellement, jusqu'aux raccourcis clavier (hotkeys) modifiables pour s'adapter aux préférences
+                        de chacun et gagner du temps !</p>
                 </div>
 
             </div>

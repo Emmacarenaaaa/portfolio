@@ -29,7 +29,7 @@
         </div>
     </nav>
 
-    <header class="hero hero-subpage">
+    <header class="hero hero-subpage hero-vigo">
         <a href="index.php#resume" class="btn-back"><i class="fas fa-arrow-left"></i> Retour au CV</a>
 
         <div class="hero-text-bg">
@@ -47,28 +47,40 @@
 
     <main>
         <div class="container">
-            <div class="intro-text" style="margin-bottom: 4rem;">
-                <p style="font-size: 1.15rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 1.5rem;">
+            <div class="intro-text stage-intro">
+                <p>
                     Pendant mon stage de BTS SIO option SLAM chez <strong>Everlite Concept</strong>, j’ai intégré le
                     pôle Communication digitale et Informatique de l’entreprise, ce qui m’a permis de découvrir
                     concrètement comment les outils numériques soutiennent à la fois l’activité commerciale, la
-                    production et la communication. J’ai travaillé en lien direct avec mon maître de stage, mais aussi
-                    avec d’autres services, ce qui m’a aidé à comprendre l’organisation globale de l’entreprise et la
+                    production et la communication. J’ai travaillé en lien direct avec mon maître de stage, mais
+                    aussi
+                    avec d’autres services, ce qui m’a aidé à comprendre l’organisation globale de l’entreprise et
+                    la
                     place centrale de l’informatique dans son fonctionnement.
                 </p>
-                <p style="font-size: 1.15rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 1.5rem;">
-                    Pendant ce stage, j’ai réalisé des missions variées allant de la conception d’e-mails marketing en
+                <p>
+                    Pendant ce stage, j’ai réalisé des missions variées allant de la conception d’e-mails marketing
+                    en
                     HTML/CSS à la mise à jour du site internet sous Joomla.<br>
-                    J’ai également pris en main et configuré Salesforce, en travaillant sur les règles de validation,
+                    J’ai également pris en main et configuré Salesforce, en travaillant sur les règles de
+                    validation,
                     les workflows et les tableaux de bord.<br>
                     Une partie importante de mon travail a aussi consisté à mettre à jour un logiciel métier
                     d’optimisation de découpe (CutPro) sur un nouvel environnement Windows.
                 </p>
-                <p style="font-size: 1.15rem; line-height: 1.8; color: var(--text-muted);">
-                    Par ailleurs, j’ai créé mon propre compte utilisateur via Active Directory et Microsoft 365, adapté
-                    des formules de calcul utilisées dans les devis Salesforce, et géré la mise en place de connexions
+                <p>
+                    Par ailleurs, j’ai créé mon propre compte utilisateur via Active Directory et Microsoft 365,
+                    adapté
+                    des formules de calcul utilisées dans les devis Salesforce, et géré la mise en place de
+                    connexions
                     réseau pour l’échange de données avec l’ERP Oracle à travers des fichiers Excel.
                 </p>
+
+                <div style="margin-top: 2rem;">
+                    <a href="doc/rapport_de_stage_everlite.pdf" target="_blank" class="article-link" style="font-size: 1.1rem;">
+                        <i class="fas fa-file-pdf" style="color: var(--accent-color);"></i> Télécharger mon rapport de stage (PDF)
+                    </a>
+                </div>
             </div>
 
             <h2 class="section-title">Mes Missions</h2>

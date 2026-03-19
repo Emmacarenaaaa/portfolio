@@ -57,18 +57,17 @@
                     <div class="article-header">
                         <span class="article-date">Mars 2026</span>
                     </div>
-                    <h3 class="article-title">L'IA générative dans les processus de création Web</h3>
+                    <h3 class="article-title">L'IA générative comme outil d'inspiration UI/UX</h3>
                     <div class="article-desc">
                         <strong>Pourquoi ça m'intéresse :</strong>
-                        L'intelligence artificielle n'est plus juste un concept, c'est un outil de création au
-                        quotidien. Réunissant mes connaissances littéraires, artistiques et techniques (comme
-                        l'utilisation de scripts Python connectés à des API), l'IA générative permet d'esquisser des
-                        maquettes ou de structurer des mondes visuels complexes très rapidement. Cela pousse le
-                        développeur à devenir plus "directeur artistique" et "prompt engineer".
+                        L'intelligence artificielle n'est plus juste un concept, c'est un outil de direction artistique au
+                        quotidien. En explorant les galeries de modèles génératifs, il est possible d'esquisser des
+                        moodboards, de trouver des palettes de couleurs ou de structurer des interfaces complexes très rapidement. Cela pousse le
+                        développeur à affiner sa sensibilité visuelle pour créer des expériences web uniques.
                     </div>
-                    <a href="https://www.smashingmagazine.com/2024/01/generative-ai-design-process/" target="_blank"
+                    <a href="https://midjourney.com/showcase" target="_blank"
                         class="article-link">
-                        Explorer le sujet (Smashing Mag) <i class="fas fa-external-link-alt"></i>
+                        Explorer la galerie Midjourney <i class="fas fa-external-link-alt"></i>
                     </a>
                 </div>
 
@@ -137,8 +136,8 @@
                         <strong>Pourquoi ça m'intéresse :</strong>
                         Le projet incroyable de Lynn Fisher démontre comment une maîtrise absolue de CSS peut se
                         transformer en art vectoriel. En modifiant astucieusement les box-shadow, linear-gradients,
-                        ::before et ::after sur une unique balise html `<div>`, elle réussit à dessiner des
-                            illustrations extrêmement détaillées. Cela m’impressionne techniquement et artistiquement.
+                        ::before et ::after sur une unique balise HTML &lt;div&gt;, elle réussit à dessiner des
+                        illustrations extrêmement détaillées. Cela m’impressionne techniquement et artistiquement.
                         </div>
                         <a href="https://a.singlediv.com/" target="_blank" class="article-link">
                             Visiter A Single Div <i class="fas fa-external-link-alt"></i>
@@ -173,10 +172,10 @@
                         <div class="article-desc">
                             <strong>Pourquoi ça m'intéresse :</strong>
                             p5.js est une bibliothèque JavaScript spécialement pensée pour rendre le code accessible aux
-                            artistes et designers. Elle permet de peindre directement sur un `<canvas>` web (formes
-                                géométriques, réactivité au son, à la souris). C'est le point de départ idéal pour un
-                                développeur sensible aux arts souhaitant expérimenter avec les algorithmes visuels et
-                                faire de la programmation orientée esthétique.
+                            artistes et designers. Elle permet de peindre directement sur un &lt;canvas&gt; web (formes
+                            géométriques, réactivité au son, à la souris). C'est le point de départ idéal pour un
+                            développeur sensible aux arts souhaitant expérimenter avec les algorithmes visuels et
+                            faire de la programmation orientée esthétique.
                         </div>
                         <a href="https://p5js.org/" target="_blank" class="article-link">
                             Débuter avec p5.js <i class="fas fa-external-link-alt"></i>

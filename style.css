@@ -723,6 +723,58 @@ nav {
     color: var(--accent-color);
 }
 
+/* ----- STAGE PAGES ----- */
+.hero-vigo {
+    background-image: linear-gradient(to right, rgba(11, 57, 84, 0.95), rgba(11, 57, 84, 0.6)), url("assets/agence-d'architecture-Vigo.jpg");
+    background-size: cover;
+    background-position: center 20%;
+}
+
+.stage-intro {
+    margin-bottom: 4rem;
+}
+
+.stage-intro p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+.stage-intro p:last-of-type {
+    margin-bottom: 0;
+}
+
+.project-gallery {
+    display: flex;
+    gap: 2rem;
+    margin-top: 3.5rem;
+    flex-wrap: wrap;
+}
+
+.gallery-item {
+    flex: 1;
+    min-width: 300px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(11, 57, 84, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.3s ease;
+    border-radius: 12px;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.03);
+}
+
 /* ----- RESPONSIVE ----- */
 @media (max-width: 968px) {
     .index-container {
