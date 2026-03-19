@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Développeur - Emma Ducos Martin</title>
 
-    <!-- Polices Google : DM Serif Display pour l'élégance (titres), Inter pour la lisibilité (corps) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -51,11 +50,10 @@
     </header>
 
     <main class="index-container">
-        <!-- COLONNE GAUCHE -->
         <div class="left-column" id="about">
 
             <div class="intro-text">
-                <h1 style="font-size: 4.5rem;">Hello,<br>je suis Emma !</h1>
+                <h1 style="font-size: 4.5rem;">Hey,<br>je suis Emma !</h1>
                 <p>Actuellement en deuxième année de <strong>BTS SIO option SLAM</strong> au Lycée Benjamin Franklin
                     d'Orléans, j'ai d'abord exploré les Humanités, la Littérature et les Arts Plastiques, ce qui me
                     donne une approche créative de la technique.</p>
@@ -191,20 +189,6 @@
             </section>
 
             <div class="bottom-section">
-                <div class="bottom-block">
-                    <h4>Missions Salesforce</h4>
-                    <ul>
-                        <li>
-                            <strong>Gestion & Config</strong>
-                            <span>Création de tableaux de bord, formules et règles.</span>
-                        </li>
-                        <li>
-                            <strong>Workflows</strong>
-                            <span>Automatisation des devis et tests en environnement.</span>
-                        </li>
-                    </ul>
-                </div>
-
                 <div class="bottom-block">
                     <h4>Centres d'intérêt</h4>
                     <div class="hobbies-icons" style="margin-top: 1.5rem;">

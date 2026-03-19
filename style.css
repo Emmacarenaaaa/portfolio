@@ -2,12 +2,12 @@
     --bg-light: #FFF9FB;
     --primary-dark: #0B3954;
     --accent-color: #7D1538;
-    
+
     --text-light: #FFF9FB;
     --text-dark: #0B3954;
     --text-muted: rgba(11, 57, 84, 0.7);
     --text-muted-light: rgba(255, 249, 251, 0.7);
-    
+
     --font-headings: 'DM Serif Display', serif;
     --font-body: 'Inter', sans-serif;
     --font-mono: 'Fira Code', monospace;
@@ -246,7 +246,7 @@ nav {
     font-size: 0.85rem;
     font-weight: 600;
     color: var(--text-light);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     z-index: 10;
 }
 
@@ -353,7 +353,7 @@ nav {
 }
 
 .accent-box .section-title {
-    color: var(--primary-dark);
+    color: var(--bg-light);
 }
 
 .accent-box .timeline {
@@ -361,13 +361,13 @@ nav {
 }
 
 .accent-box .timeline-item::before {
-    color: var(--primary-dark);
+    color: var(--bg-light);
     background-color: var(--accent-color);
 }
 
 .accent-box .timeline-date,
 .accent-box .timeline-title {
-    color: var(--primary-dark);
+    color: var(--bg-light);
 }
 
 .accent-box .timeline-subtitle,
@@ -390,6 +390,11 @@ nav {
     font-size: 0.8rem;
     font-weight: 600;
     letter-spacing: 0.5px;
+}
+
+.accent-box .tag {
+    background-color: rgba(255, 249, 251, 0.2);
+    color: var(--bg-light);
 }
 
 /* ----- RIGHT COLUMN (Profile / Skills) ----- */
@@ -519,7 +524,7 @@ nav {
     align-items: start;
 }
 
-.skill-list li > span:first-child {
+.skill-list li>span:first-child {
     font-weight: 600;
     color: var(--primary-dark);
 }
@@ -724,21 +729,26 @@ nav {
         grid-template-columns: 1fr;
         gap: 3rem;
     }
+
     .hero-content {
         flex-direction: column;
     }
+
     .hero-right {
         align-items: flex-start;
         text-align: left;
         margin-top: 2rem;
     }
+
     .hero-text-bg {
         font-size: 25vw;
         top: 15%;
     }
+
     .nav-links {
         display: none;
     }
+
     .bottom-section {
         grid-template-columns: 1fr;
     }
